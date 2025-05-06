@@ -1,0 +1,583 @@
+/* Start Home Page */
+
+/* Hero section */
+.hero {
+  overflow: hidden;
+  margin-block: 0;
+  .hero-tag {
+    padding: 4rem 2.5rem;
+    color: var(--color-maron-500);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .hero-badge {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+    }
+    .hero-text {
+      position: relative;
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 80px;
+      max-width: 500px;
+    }
+
+    .hero-subtext {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px; /* 136.364% */
+      letter-spacing: 0.2px;
+      max-width: 350px;
+    }
+  }
+  img {
+    position: absolute;
+  }
+
+  .hero-vector {
+    inset-inline-end: -20px;
+    top: 0px;
+    z-index: -1;
+  }
+
+  @media (max-width: 1200px) {
+    padding-block: 0;
+    .hero-tag {
+      gap: 1rem;
+      .hero-badge {
+        font-size: 1.5rem;
+        line-height: 1rem;
+      }
+      .hero-text {
+        font-size: 2.25rem;
+        max-width: 400px;
+        line-height: 56px;
+      }
+      .hero-subtext {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        max-width: 280px;
+      }
+    }
+    .hero-vector {
+      width: 50%;
+      max-width: 440px;
+      top: unset;
+      bottom: 0;
+    }
+  }
+  @media (max-width: 991px) {
+    .hero-tag {
+      gap: 0.75rem;
+    }
+    .hero-vector {
+      width: 50%;
+      max-width: 440px;
+      top: unset;
+      bottom: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 80dvh;
+    min-height: 630px;
+    max-height: 670px;
+    .wrapper {
+      height: 100%;
+    }
+    .hero-tag {
+      height: 100%;
+    }
+    .hero-vector {
+      width: 98%;
+      left: 50%;
+      translate: -50%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    max-height: 640px;
+    .hero-tag {
+      .hero-badge {
+        font-size: 1.25rem;
+        line-height: 1rem;
+      }
+      .hero-text {
+        font-size: 1.7rem;
+        max-width: unset;
+        line-height: 40px;
+      }
+      .hero-subtext {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+/* End Hero */
+
+/* Sub Hero section */
+.sub-hero {
+  background-color: var(--color-maron-500);
+
+  .sub-hero-tag {
+    position: relative;
+    padding-block: 4.5rem 10rem;
+    .sub-hero-text {
+      font-size: 55px;
+      font-weight: 800;
+      line-height: 72px;
+      margin-bottom: 4rem;
+      color: #fff;
+      span {
+        color: var(--color-yellow-500);
+      }
+    }
+    .sub-hero-badge {
+      display: flex;
+      gap: 2rem;
+      .badge {
+        background-color: var(--color-yellow-500);
+        width: 100px;
+        aspect-ratio: 1/1;
+        border-radius: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .badge-title {
+        color: var(--color-yellow-500);
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 50px;
+      }
+
+      .badge-desc {
+        color: #fff;
+
+        font-size: 18px;
+
+        font-weight: 500;
+        line-height: 41.04px;
+      }
+    }
+  }
+
+  #subHeroVector {
+    z-index: 0;
+    --top: 20px;
+    --left: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 550px;
+    width: 50%;
+    min-width: 550px;
+    img {
+      position: absolute;
+      left: var(--left);
+      top: var(--top);
+    }
+
+    #subHeroAvatar {
+      top: calc(var(--top) + 40px);
+      left: calc(var(--left) + 50px);
+    }
+
+    #floatingVectors {
+      top: 50%;
+      left: 50%;
+      position: absolute;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .sub-hero-tag {
+      padding-block: 3rem 8rem;
+      .sub-hero-text {
+        font-size: 2.5rem;
+        line-height: 58px;
+        font-weight: 700;
+        margin-bottom: 3rem;
+      }
+
+      .sub-hero-badge {
+        gap: 1.25rem;
+
+        .badge {
+          width: 70px;
+          height: 70px;
+
+          img {
+            width: 70%;
+          }
+        }
+
+        .badge-title {
+          font-size: 1.75rem;
+          line-height: 40px;
+        }
+
+        .badge-desc {
+          font-size: 16px;
+          line-height: 36px;
+        }
+      }
+
+      #subHeroVector {
+        padding-inline-start: 2rem;
+        width: 500px;
+        --top: 40px;
+        --left: 180px;
+        zoom: 0.8;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .sub-hero-tag {
+      padding-block: 3rem;
+      padding-inline: 2rem;
+      .sub-hero-text {
+        font-size: 2.25rem;
+        line-height: 52px;
+        font-weight: 700;
+        margin-bottom: 2.57rem;
+      }
+
+      .sub-hero-badge {
+        gap: 1rem;
+
+        .badge {
+          width: 60px;
+          height: 60px;
+          border-radius: 1rem;
+
+          img {
+            width: 70%;
+          }
+        }
+
+        .badge-title {
+          font-size: 1.25rem;
+          line-height: 30px;
+        }
+
+        .badge-desc {
+          font-size: 15px;
+          line-height: 28px;
+        }
+      }
+
+      #subHeroVector {
+        width: 400px;
+        --top: 40px;
+        --left: 170px;
+        zoom: 0.55;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .sub-hero-tag {
+      padding-block: 0 2rem;
+      padding-inline: 1.5rem;
+      .sub-hero-text {
+        font-size: 2rem;
+        line-height: 44px;
+        font-weight: 600;
+        margin-bottom: 2.25rem;
+      }
+
+      .sub-hero-badge {
+        gap: 0.74rem;
+        .badge {
+          width: 50px;
+          height: 50px;
+          border-radius: 0.75rem;
+        }
+
+        .badge-title {
+          font-size: 1rem;
+          line-height: 28px;
+        }
+
+        .badge-desc {
+          font-size: 14px;
+          line-height: 24px;
+          font-weight: 400;
+        }
+      }
+
+      #subHeroVector {
+        width: 300px;
+        --top: -10px;
+        --left: 10px;
+        zoom: 0.45;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    height: 700px;
+    .sub-hero-tag {
+      .sub-hero-text {
+        text-align: center;
+      }
+      #subHeroVector {
+        --top: 350px;
+        --left: 40%;
+        zoom: 0.7;
+        width: 100%;
+        min-width: unset;
+
+        img {
+          left: 50%;
+          translate: -50%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 440px) {
+    .sub-hero-tag {
+      .sub-hero-text {
+        font-size: 1.5rem;
+        line-height: 38px;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .sub-hero-badge {
+        gap: 0.75rem;
+
+        .badge-title {
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        .badge-desc {
+          font-size: 12px;
+          line-height: 22px;
+          font-weight: 300;
+        }
+      }
+
+      #subHeroVector {
+        --top: 320px;
+        --left: 40%;
+        zoom: 0.7;
+        width: 100%;
+        min-width: unset;
+
+        img {
+          left: 50%;
+          translate: -50%;
+        }
+      }
+    }
+  }
+}
+
+/* End Sub Hero */
+
+/* Main Categories Section */
+.card-category-main {
+  background-color: var(--color-maron-500);
+  padding: 40px 130px 80px 38px;
+  border-radius: 1rem;
+  position: relative;
+  background-image: url("/images/patterns/category-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  .card-title {
+    color: var(--color-yellow-500);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 70px;
+    text-align: end;
+    transition: translate 0.2s ease-in-out;
+  }
+
+  &:hover {
+    .card-title {
+      translate: -0.5rem;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    padding: 35px 110px 70px 30px;
+    .card-title {
+      font-size: 3rem;
+      line-height: 60px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    padding: 30px 100px 65px 25px;
+    .card-title {
+      font-size: 2.5rem;
+      line-height: 52px;
+      font-weight: 600;
+    }
+  }
+  @media (max-width: 992px) {
+    padding: 24px 90px 60px 25px;
+    .card-title {
+      font-size: 1.8rem;
+      line-height: 44px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 24px 80px 50px 25px;
+    .card-title {
+      font-size: 1.5rem;
+      line-height: 38px;
+    }
+  }
+}
+/* End Main Categories  */
+
+/* Courses Section  */
+#selectedCourses {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 960px;
+    height: 780px;
+    border-radius: 960px;
+    background: rgba(64, 1, 1, 0.2);
+    filter: blur(127px);
+    inset-inline-end: -40%;
+    bottom: -50%;
+  }
+}
+
+/* End Courses  */
+
+/* Instructors Section  */
+#selectedInstructors {
+  position: relative;
+  /* .swiper {
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+  } */
+  &::before {
+    content: "";
+    position: absolute;
+    width: 960px;
+    height: 780px;
+    border-radius: 960px;
+    background: rgba(64, 1, 1, 0.2);
+    filter: blur(127px);
+    inset-inline-end: 70%;
+  }
+}
+
+/* End Instructors  */
+
+/* News Letter Section  */
+.news-letter {
+  background-color: var(--color-maron-500);
+  padding: 5rem 1rem 4rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 1.5rem;
+  position: relative;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 55px;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  #vectorArrow {
+    position: absolute;
+    inset-inline-end: 1rem;
+    bottom: 1rem;
+  }
+
+  #vectorLamb {
+    position: absolute;
+    inset-inline-start: 2rem;
+    bottom: 3rem;
+  }
+
+  #vectorCirclesRight {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+  }
+
+  #vectorCirclesLeft {
+    position: absolute;
+    rotate: -90deg;
+    inset-inline-end: 0;
+    top: -1rem;
+  }
+
+  @media (max-width: 992px) {
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 44px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  img {
+    zoom: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 38px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  img {
+    zoom: 0.6;
+  }
+
+  @media (max-width: 576px) {
+    gap: 0.7rem;
+    padding-block: 4rem 5rem;
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 38px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  img {
+    zoom: 0.4;
+  }
+}
+
+/* End News Letter  */
+
+/* End Home Page */

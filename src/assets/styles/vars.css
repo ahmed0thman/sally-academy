@@ -1,0 +1,19 @@
+:root {
+  --color-maron-500: rgb(64, 1, 1);
+
+  --color-yellow-500: rgb(255, 216, 102);
+
+  --color-green-500: rgb(91, 110, 64);
+
+  --color-gray-500: rgb(78, 78, 78);
+
+  --color-maron-500-rgb: 64, 1, 1;
+
+  --color-yellow-500-rgb: 255, 216, 102;
+
+  --color-green-500-rgb: 91, 110, 64;
+
+  --color-gray-500-rgb: 78, 78, 78;
+
+  --color-white-900: #fafafa;
+}
