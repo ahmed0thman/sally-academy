@@ -1,21 +1,21 @@
 import { animate } from "motion/mini";
 
-export async function renderHtml(containerId, viewName, viewPath) {
-  const container = document.getElementById(containerId);
-  const viewFile = `${viewPath}/${viewName}.html`;
-  const viewStyle = `${viewPath}/${viewName}.css`;
-  if (container) {
-    const html = await fetch(viewFile).then((res) => res.text());
-    const sanitizedHtml = html.replace(
-      /<script type="module" src="\/@vite\/client"><\/script>/g,
-      ""
-    );
-    // console.log(sanitizedHtml);
-    container.innerHTML = sanitizedHtml;
-    return true;
-  }
-  return false;
-}
+// export async function renderHtml(containerId, viewName, viewPath) {
+//   const container = document.getElementById(containerId);
+//   const viewFile = `${viewPath}/${viewName}.html`;
+//   const viewStyle = `${viewPath}/${viewName}.css`;
+//   if (container) {
+//     const html = await fetch(viewFile).then((res) => res.text());
+//     const sanitizedHtml = html.replace(
+//       /<script type="module" src="\/@vite\/client"><\/script>/g,
+//       ""
+//     );
+//     // console.log(sanitizedHtml);
+//     container.innerHTML = sanitizedHtml;
+//     return true;
+//   }
+//   return false;
+// }
 
 export function animateOnView(
   target,

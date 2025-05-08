@@ -1,8 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./style.css";
-import { renderHtml } from "./shared/utilities/helperFunctions";
-renderHtml("header", "header", "/src/shared/layout/header");
-renderHtml("footer", "footer", "/src/shared/layout/footer");
-
-// renderHtml("main", "home", "/src/pages/home");
+import "@/shared/utilities/modal";
+import "@/pages/home/home";
+import "@/shared/layout/header/header";
+document.body.classList.add("no-transition");
+window.addEventListener("load", () => {
+  document.body.classList.remove("no-transition");
+});

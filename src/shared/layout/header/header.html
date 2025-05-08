@@ -8,20 +8,75 @@
                 x
             </span>
             <ul>
-                <li>
-                    <a href="/" class="active">الرئيسية</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">الرئيسية</a>
                 </li>
-                <li>
-                    <a href="">المدرسين</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="">المدرسين</a>
                 </li>
-                <li>
-                    <a href="">الأقسام</a>
+                <li class="d-none d-md-block dropdown nav-item">
+                    <details>
+                        <summary>الأقسام</summary>
+                        <ul class="nav-dropdown">
+                            <li class=" dropdown nav-dropdown-item ">
+                                <span>المرحلة الثانوية</span>
+                                <ul class="nav-dropdown">
+                                    <li class="dropdown  nav-dropdown-item ">
+                                        <span>قدرات</span>
+                                        <ul class="nav-dropdown">
+                                            <li class=" nav-dropdown-item ">
+                                                <a href="">لفظي</a>
+                                            </li>
+                                            <li class="nav-dropdown-item ">
+                                                <a href="">كمي</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown nav-dropdown-item ">
+                                        <span>تحصيلي</span>
+                                        <ul class="nav-dropdown">
+                                            <li class=" nav-dropdown-item ">
+                                                <a href="">فيزياء</a>
+                                            </li>
+                                            <li class="nav-dropdown-item ">
+                                                <a href="">كيمياء</a>
+                                            </li>
+                                            <li class="nav-dropdown-item ">
+                                                <a href="">أحياء</a>
+                                            </li>
+                                            <li class="nav-dropdown-item ">
+                                                <a href="">رياضيات</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li class=" dropdown nav-dropdown-item ">
+                                <span>المرحلة الجامعية</span>
+                                <ul class="nav-dropdown">
+                                    <li class=" nav-dropdown-item ">
+                                        <a href="">كلية العلوم</a>
+                                    </li>
+                                    <li class="nav-dropdown-item ">
+                                        <a href="">كلية الطب</a>
+                                    </li>
+                                    <li class="nav-dropdown-item ">
+                                        <a href="">كلية الهندسة</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
                 </li>
-                <li>
-                    <a href="">من نحن</a>
+                <li onclick="toggleMenu()" class="d-md-none nav-item">
+                    <a class="nav-link" href="#">الأقسام</a>
                 </li>
-                <li>
-                    <a href="">تواصل معنا</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="">من نحن</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">تواصل معنا</a>
                 </li>
             </ul>
         </nav>

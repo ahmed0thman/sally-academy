@@ -6,6 +6,7 @@ header {
   left: 0;
   z-index: 100;
   width: 100%;
+  box-shadow: 0 0 4px 3px rgba(var(--color-maron-500-rgb));
 
   nav {
     ul {
@@ -15,10 +16,14 @@ header {
       gap: 1.5rem;
 
       li {
+        cursor: pointer;
+      }
+      .nav-item {
         padding: 0.5rem 0;
         position: relative;
 
-        a {
+        .nav-link {
+          color: #fff;
           &:hover {
             color: #fff;
           }
@@ -44,6 +49,90 @@ header {
         &:hover {
           &::after {
             transform: scaleX(1);
+          }
+        }
+      }
+
+      .dropdown {
+        position: relative;
+        margin-inline-end: 1.5rem;
+        position: relative;
+        .nav-dropdown {
+          position: absolute;
+          z-index: 110;
+          top: 1rem !important;
+          border: none;
+          border-radius: 12px;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+          gap: 0;
+
+          .nav-dropdown-item {
+            color: var(--color-gray-500);
+            padding: 0.75rem 2rem;
+            padding-inline-start: 1rem;
+            padding-inline-end: 2.5rem;
+            text-align: start;
+            white-space: nowrap;
+            width: 100%;
+            &:not(:last-child) {
+              border-bottom: 1px solid #eaeaea;
+            }
+
+            a {
+              color: var(--color-gray-500) !important;
+            }
+
+            &.dropdown {
+              margin: 0;
+              span {
+                color: var(--color-gray-500);
+              }
+              .nav-dropdown {
+                display: flex;
+                background-color: #fff;
+                flex-direction: column;
+                top: 1rem;
+                inset-inline-start: calc(100% + 0.1rem);
+              }
+              position: relative;
+              &::after {
+                position: absolute;
+                content: url("/images/icons/chevron-down-gray.svg");
+                inset-inline-end: 8px;
+                transform: rotateY(180deg);
+              }
+
+              & > .nav-dropdown {
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease-out;
+              }
+              &:hover > .nav-dropdown,
+              &:has(.nav-dropdown-item:is(:hover)) {
+                opacity: 1;
+                pointer-events: all;
+              }
+            }
+          }
+        }
+
+        .dropdown-toggle {
+          background-color: transparent;
+          color: #fff;
+
+          &::after {
+            all: unset;
+            content: url("/images/icons/chevron-down.svg");
+            position: absolute;
+            top: 50%;
+            inset-inline-end: -1.5rem;
+            transform: translateY(-50%);
+            transition: 0.2s ease;
+            transform-origin: center;
+          }
+
+          &.show::after {
+            transform: translateY(-50%) rotate(180deg);
           }
         }
       }
@@ -100,15 +189,17 @@ header {
       translate: 300px;
       opacity: 0;
       transition: all 0.33s ease-out;
+      overflow: hidden;
       ul {
         flex-direction: column;
         align-items: start;
         gap: 0;
-        li {
+        .nav-item {
           padding-block: 1.5rem;
           width: 290px;
           padding-inline-start: 2rem;
-          a {
+          a,
+          summary {
             font-size: 14px;
             font-weight: 500;
 
@@ -129,6 +220,7 @@ header {
 
       &.open {
         opacity: 1;
+        transition: all 0.33s ease-out;
         translate: 0;
       }
     }
