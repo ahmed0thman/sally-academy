@@ -16,7 +16,7 @@
           <img src="/images/icons/logo.svg" alt="Logo">
         </div>
         <nav id="navMenu">
-          <span onclick="toggleMenu()" class="btn-close-menu d-md-none">
+          <span class="btn-close-menu d-md-none nav-toggler">
             x
           </span>
           <ul>
@@ -81,7 +81,7 @@
                 </li>
               </ul>
             </li>
-            <li onclick="toggleMenu()" class="d-md-none nav-item">
+            <li class="d-md-none nav-item nav-toggler">
               <a class="nav-link" href="#mainMategories">الأقسام</a>
             </li>
             <li class="nav-item">
@@ -94,7 +94,7 @@
         </nav>
         <div class="d-flex gap-3 align-items-center">
           <a href="" class="btn btn-yellow-500 btn-login">تسجيل الدخول</a>
-          <span id="btnMenu" onclick="toggleMenu()" class="btn-menu d-md-none">
+          <span class="btn-menu d-md-none nav-toggler">
             <img src="/images/icons/bars.svg" alt="">
           </span>
         </div>
@@ -750,7 +750,7 @@
     </div>
   </div>
   <script type="module" src="/src/main.js"></script>
-  <script src="/src/shared/layout/header/header.js"></script>
+  <!-- <script src="/src/shared/layout/header/header.js"></script> -->
 </body>
 
 </html>
