@@ -448,41 +448,11 @@
 
 /* Courses Section  */
 #selectedCourses {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 960px;
-    height: 780px;
-    border-radius: 960px;
-    background: rgba(64, 1, 1, 0.2);
-    filter: blur(127px);
-    inset-inline-end: -40%;
-    bottom: -50%;
-  }
 }
 
 /* End Courses  */
 
 /* Instructors Section  */
-#selectedInstructors {
-  position: relative;
-  /* .swiper {
-    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
-    background-color: transparent;
-  } */
-  &::before {
-    content: "";
-    position: absolute;
-    width: 960px;
-    height: 780px;
-    border-radius: 960px;
-    background: rgba(64, 1, 1, 0.2);
-    filter: blur(127px);
-    inset-inline-end: 70%;
-  }
-}
 
 /* End Instructors  */
 
@@ -498,6 +468,7 @@
   color: #fff;
   gap: 1.5rem;
   position: relative;
+  overflow: hidden;
 
   h2 {
     font-size: 40px;
@@ -542,9 +513,9 @@
     p {
       font-size: 18px;
     }
-  }
-  img {
-    zoom: 0.7;
+    img {
+      zoom: 0.7;
+    }
   }
 
   @media (max-width: 768px) {
@@ -556,9 +527,9 @@
     p {
       font-size: 16px;
     }
-  }
-  img {
-    zoom: 0.6;
+    img {
+      zoom: 0.6;
+    }
   }
 
   @media (max-width: 576px) {
@@ -572,12 +543,88 @@
     p {
       font-size: 14px;
     }
-  }
-  img {
-    zoom: 0.4;
+    img {
+      zoom: 0.4;
+    }
   }
 }
 
 /* End News Letter  */
 
 /* End Home Page */
+
+/* Start stages Page */
+.stages {
+  padding: 5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .stages-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+
+    .stage-option {
+      background-color: var(--color-yellow-500);
+      width: 300px;
+      height: 265px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      transition: 0.25s ease-out;
+
+      svg {
+        width: 80px;
+        height: 80px;
+      }
+
+      .stage-title {
+        color: var(--color-maron-500);
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 56px;
+      }
+
+      &:hover {
+        background-color: var(--color-maron-500);
+
+        .stage-title {
+          color: var(--color-yellow-500);
+        }
+
+        svg {
+          path {
+            stroke: var(--color-yellow-500);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    gap: 2rem;
+    .stages-options {
+      gap: 2rem;
+      .stage-option {
+        zoom: 0.75;
+      }
+    }
+  }
+
+  @media (max-width: 567px) {
+    padding: 3rem 0 0;
+    gap: 1rem;
+    .stages-options {
+      gap: 1rem;
+      .stage-option {
+        zoom: 0.5;
+      }
+    }
+  }
+}
+/* End stages Page */

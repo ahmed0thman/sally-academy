@@ -46,9 +46,16 @@ header {
           transition: all 0.25s ease-in-out;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
           &::after {
             transform: scaleX(1);
+          }
+        }
+
+        &.active {
+          .nav-link {
+            font-weight: 700;
           }
         }
       }

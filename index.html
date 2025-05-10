@@ -12,19 +12,19 @@
   <header id="header">
     <div class="wrapper">
       <div class="d-flex justify-content-between align-items-center">
-        <div class="logo">
+        <a href="/" class="logo">
           <img src="/images/icons/logo.svg" alt="Logo">
-        </div>
+        </a>
         <nav id="navMenu">
           <span class="btn-close-menu d-md-none nav-toggler">
             x
           </span>
           <ul>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="/">الرئيسية</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">المدرسين</a>
+              <a class="nav-link" href="/src/pages/instructors/instructors.html">المدرسين</a>
             </li>
             <li class="d-none d-md-block dropdown nav-item">
               <span class="dropdown-toggle nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,11 +37,27 @@
                     <li class="dropdown  nav-dropdown-item ">
                       <span>قدرات</span>
                       <ul class="nav-dropdown">
-                        <li class=" nav-dropdown-item ">
-                          <a href="">لفظي</a>
+                        <li class="dropdown nav-dropdown-item ">
+                          <span>لفظي</span>
+                          <ul class="nav-dropdown">
+                            <li class="  nav-dropdown-item ">
+                              <a href="/src/pages/courses/courses.html">تأسيس</a>
+                            </li>
+                            <li class=" nav-dropdown-item ">
+                              <a href="/src/pages/courses/courses.html">تدريب</a>
+                            </li>
+                          </ul>
                         </li>
-                        <li class="nav-dropdown-item ">
-                          <a href="">كمي</a>
+                        <li class="dropdown nav-dropdown-item ">
+                          <span>كمي</span>
+                          <ul class="nav-dropdown">
+                            <li class="  nav-dropdown-item ">
+                              <a href="/src/pages/courses/courses.html">تأسيس</a>
+                            </li>
+                            <li class=" nav-dropdown-item ">
+                              <a href="/src/pages/courses/courses.html">تدريب</a>
+                            </li>
+                          </ul>
                         </li>
                       </ul>
                     </li>
@@ -49,16 +65,16 @@
                       <span>تحصيلي</span>
                       <ul class="nav-dropdown">
                         <li class=" nav-dropdown-item ">
-                          <a href="">فيزياء</a>
+                          <a href="/src/pages/courses/courses.html">فيزياء</a>
                         </li>
                         <li class="nav-dropdown-item ">
-                          <a href="">كيمياء</a>
+                          <a href="/src/pages/courses/courses.html">كيمياء</a>
                         </li>
                         <li class="nav-dropdown-item ">
-                          <a href="">أحياء</a>
+                          <a href="/src/pages/courses/courses.html">أحياء</a>
                         </li>
                         <li class="nav-dropdown-item ">
-                          <a href="">رياضيات</a>
+                          <a href="/src/pages/courses/courses.html">رياضيات</a>
                         </li>
                       </ul>
                     </li>
@@ -69,13 +85,13 @@
                   <span>المرحلة الجامعية</span>
                   <ul class="nav-dropdown">
                     <li class=" nav-dropdown-item ">
-                      <a href="">كلية العلوم</a>
+                      <a href="/src/pages/courses/courses.html">كلية العلوم</a>
                     </li>
                     <li class="nav-dropdown-item ">
-                      <a href="">كلية الطب</a>
+                      <a href="/src/pages/courses/courses.html">كلية الطب</a>
                     </li>
                     <li class="nav-dropdown-item ">
-                      <a href="">كلية الهندسة</a>
+                      <a href="/src/pages/courses/courses.html">كلية الهندسة</a>
                     </li>
                   </ul>
                 </li>
@@ -187,12 +203,12 @@
     <section>
       <div class="wrapper">
         <div id="mainMategories" class="d-flex flex-wrap align-items-center justify-content-center gap-4 gap-lg-5 my-4">
-          <a class="card-category-main">
+          <a href="/src/pages/stages/secondary/secondary.html" class="card-category-main">
             <h2 class="card-title">
               المرحلة الثانوية
             </h2>
           </a>
-          <a class="card-category-main">
+          <a href="/src/pages/stages/college/college.html" class="card-category-main">
             <h2 class="card-title">
               المرحلة الجامعية
             </h2>
@@ -201,7 +217,7 @@
       </div>
     </section>
 
-    <section id="selectedCourses" class="px-2">
+    <section id="selectedCourses" class="bg-gradient-circles px-2">
       <div class="wrapper">
         <div id="selectedCoursesHeader" class="d-flex justify-content-between">
           <img src="/images/icons/fancy-arrow-down.svg" class="d-none d-lg-block" alt="">
@@ -416,7 +432,7 @@
 
     </section>
 
-    <section id="selectedInstructors" class="px-2">
+    <section id="selectedInstructors" class="bg-gradient-circles px-2">
       <div class=" wrapper">
         <div id="selectedCInstructorsHeader" class="d-flex justify-lg-content-between gap-3">
           <img src="/images/icons/saturn.svg" style="translate: 0 -40px; margin-inline: 4px;" alt="">
@@ -750,6 +766,7 @@
     </div>
   </div>
   <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/pages/home/home.js"></script>
   <!-- <script src="/src/shared/layout/header/header.js"></script> -->
 </body>
 
