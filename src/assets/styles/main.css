@@ -628,3 +628,118 @@
   }
 }
 /* End stages Page */
+
+/* Start about Page */
+#about {
+  .about-list {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .section-title {
+      font-size: 4rem;
+    }
+    .about-item {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 2.2rem;
+      color: var(--color-maron-500);
+      /* max-width: 70%; */
+
+      &::before {
+        content: url("/images/icons/list-marker.svg");
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/images/patterns/pluses.svg");
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .wrapper {
+    display: flex;
+
+    .vectors {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 7rem;
+      img {
+        width: 90px;
+      }
+    }
+  }
+}
+
+/* End about Page */
+
+/* Start Contact Page */
+
+.contact {
+  background-color: var(--color-maron-500);
+  padding: 3rem 2rem;
+  display: flex;
+  gap: 3.5rem;
+  justify-content: space-between;
+  border-radius: 14px;
+  background-image: url("/images/patterns/contact.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 350px;
+  .contact-info {
+    width: 300px;
+    .title {
+      color: var(--color-yellow-500);
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  .contact-form {
+    color: #fff;
+    flex-grow: 1;
+
+    .form-group {
+      margin-bottom: 1.15rem;
+
+      .form-control {
+        padding: 0.75rem 1rem;
+
+        &::placeholder {
+          color: #737865 !important;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    background-image: none;
+    .contact-info {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 567px) {
+    padding: 1.5rem;
+    .contact-form {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* End Contact Page */
