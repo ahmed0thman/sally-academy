@@ -722,6 +722,10 @@
         }
       }
     }
+    .btn {
+      display: block;
+      margin-inline-start: auto;
+    }
   }
 
   @media (max-width: 768px) {

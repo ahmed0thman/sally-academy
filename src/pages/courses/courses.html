@@ -23,7 +23,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/">الرئيسية</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="">المدرسين</a>
                         </li>
                         <li class="d-none d-md-block dropdown nav-item">
@@ -416,6 +416,67 @@
             حقوق النشر محفوظة © أكاديمية سالي 2025
         </div>
     </footer>
+    <div id="modalPurchase" class="modal">
+        <div id="purchaseStepMethod" class="modal-view modal-purchase w-50" style="min-width: 300px; max-width: 650px;">
+            <button class="btn-outline-maron-500 btn-nav btn-modal-toggler" data-target="modalPurchase"
+                data-action="close">x</button>
+            <div class="py-3">
+                <h4 class="text-center">
+                    طرق الدفع
+                </h4>
+                <div class="d-flex flex-column gap-2 pt-3">
+                    <div class="btn-option btn-option-radion">
+                        <input type="radio" name="method" id="coupon">
+                        <label for="coupon"> coupon code</label>
+
+                    </div>
+                    <div class="btn-option btn-option-radion">
+                        <input type="radio" name="method" id="wallet">
+                        <label for="wallet">My Wallet</label>
+
+                    </div>
+                    <div class="btn-option btn-option-radion">
+                        <input type="radio" name="method" id="paymob">
+                        <label for="paymob">PayMob</label>
+
+                    </div>
+                </div>
+                <button class="btn btn-next">
+                    <span>استكمال</span>
+                </button>
+            </div>
+        </div>
+        <div id="purchaseStepCoupon" class="modal-view modal-purchase w-50" style="min-width: 300px; max-width: 550px;">
+            <button class="btn btn-nav">
+                &#x276E;
+            </button>
+            <h4 class="text-center">
+                الدرس مقفل
+            </h4>
+            <label for="couponCode" class="form-label mt-4">Coupon Code</label>
+            <div class="input-group mb-4 w-75">
+                <input class="form-control" type="text" name="couponCode" id="couponCode">
+            </div>
+            <button class="btn btn-next">
+                <span>استكمال</span>
+            </button>
+        </div>
+        <div id="purchaseStepWallet" class="modal-view modal-purchase p-5">
+            <div class="d-flex flex-column gap-4 align-items-center  px-5 py-2">
+                <h4 class="text-center">
+                    هل انت متأكد؟
+                </h4>
+                <p class="text-capitalize text-gray-500 fs-5 w-80 text-center">
+                    the amount will be decrase 499 from your wallet.
+                </p>
+                <div class="d-flex gap-3 flex-wrap justify-content-center">
+                    <button class="btn btn-outline-maron-500">نعم ادفعها</button>
+                    <button class="btn btn-maron-500 btn-modal-toggler" data-target="modalPurchase"
+                        data-action="close">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
     <script type="module" src="/src/pages/courses/courses.js"></script>
 </body>
